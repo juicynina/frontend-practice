@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root {
+        --white: #FFFFFF;
+        --black: #000000;
+        --very-light-pink: #C7C7C7;
+        --text-input-field: #F7F7F7;
+        --hospital-green: #ACD9B2;
+        --sm: 14px;
+        --md: 16px;
+        --lg: 18px;
+        }
+        body {
+            font-family: 'Quicksand', sans-serif;
+            margin: 0;
+        }
+        .menu {
+            display: none;
+            height: 20px;
+            align-self: center;
+        }
+        nav {
+         display: flex;
+         justify-content: space-between;
+         height: 50px;
+         border-bottom: 1px solid var(--very-light-pink);
+        }
+        .navbar-left {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            padding: 0 30px;
+        }
+        .navbar-left .logo {
+            width: 100px;
+        }
+        .navbar-left .bar-list {
+            display: flex;
+            flex-direction: row;
+            margin-left: 30px;
+        }
+        .navbar-left ul,
+        .navbar-right ul {
+            list-style: none;
+            padding: 0;
+        }
+        .bar-list ul {
+            margin: 10px 10px ;
+        }
+        .bar-list a {
+            text-decoration: none;
+            color: var(--very-light-pink);
+            padding: 8px;
+        }
+        .bar-list a:hover {
+            color: var(--hospital-green);
+            border: 1px solid var(--hospital-green);
+            border-radius: 12px;
+        } 
+        .navlist-right {
+            display: flex;
+        }
+        .navbar-cart {
+            margin-left: 16px;
+            padding: 0 30px 0 0;
+        }
+        .cart-items {
+            position: absolute;
+            font-size: var(--md);
+            right: 28px;
+            top: 8px;
+            background-color: var(--hospital-green);
+            border-radius: 50%;
+            color: var(--white);
+            align-self: center;
+        }
+        .navbar-email {
+            color: var(--very-light-pink);
+            font-size: var(--sm);
+        }
+        .navbar-email img {
+            transform: rotate(90deg);
+            margin-left: 10px;
+        }
+        @media (max-width: 640px) {
+            .menu {
+                display: block;
+                margin-left: 30px;
+            }
+            .logo {
+                align-self: center;
+            }
+            .navbar-left .bar-list {
+                display: none;
+            }
+            .navbar-email {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <img src="/icons/icon_menu.svg" alt="menu" class="menu">
+
+        <div class="navbar-left">
+            <img src="./logos/logo_yard_sale.svg" alt="logo" class="logo">
+
+            <ul class="bar-list">
+                <li><a href="/">All</a></li>
+                <li><a href="/">Clothes</a></li>
+                <li><a href="/">Electronics</a></li>
+                <li><a href="/">Furniture</a></li>
+                <li><a href="/">Toys</a></li>
+                <li><a href="/">Others</a></li>
+                </ul>
+        </div>
+        <div class="navbar-right">
+            <ul class="navlist-right">
+            <li class="navbar-email">techie@example.com
+                <img src="./icons/flechita.svg" alt="">
+            </li>
+            <li class="navbar-cart"><img src="/icons/icon_shopping_cart.svg" alt="shopping card"></li>
+            <div class="cart-items">2</div>
+            </ul>
+        </div>
+    </nav>
+</body>
+</html>
