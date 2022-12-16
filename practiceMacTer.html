@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: grey;
+        }
+        .container {
+            background-color: black;
+            height: 200px;
+            width: 250px;
+            border-radius: 4px;
+        }
+        .container p {
+            color: gray;
+            margin-left: 16px;
+        }
+        .dot-container {
+            display: flex;
+        }
+        .dot-container li {
+            background-color: white;
+            height: 12px;
+            width: 12px;
+            border-radius: 50%;
+            margin: 4px;
+            list-style: none;
+        }
+        .dot-container li:nth-child(1) {
+            background-color: red;
+        }
+        .dot-container li:nth-child(2) {
+            background-color: yellow;
+        }
+        .dot-container li:nth-child(3) {
+            background-color: greenyellow
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="dot-container">
+            <li></li>
+            <li></li>
+            <li></li>
+        </div>
+        <p> 4 + "7"; // 47</p>
+        <p> 4 * "7"; // 28</p>
+        <p> 2 + true; // 3</p>
+        <p> false - 3 // -3</p>
+    </div>
+</body>
+</html>
