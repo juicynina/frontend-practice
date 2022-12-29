@@ -30,7 +30,7 @@
             <li class="navbar-email">techie@example.com
                 <img src="./icons/flechita.svg" alt="">
             </li>
-            <li class="navbar-cart"><img src="./icons/icon_shopping_cart.svg" alt="shopping card"></li>
+            <li class="navbar-cart"><img src="./icons/icon_shopping_cart.svg" alt="shopping cart"></li>
             <div class="cart-items">2</div>
             </ul>
         </div>
@@ -80,7 +80,6 @@
                  <a href="/">My Account</a>
              </li>
             </ul>
-     
             <ul>
              <li>
                  <a href="/" class="email">techie@example.com</a>
@@ -92,7 +91,7 @@
          </div>
     </nav>
 
-    <aside class="product-detail inactive">
+    <aside id='shoppingCartContainer' class="inactive">
         <div class="title-container">
           <img src="./icons/flechita.svg" alt="arrow">
           <p class="title">Shopping cart</p>
@@ -142,6 +141,27 @@
       </div>
       </aside>
     
+      <aside id='productDetail' class="inactive">
+        <div class="product-image">
+            <img src="./icons/icon_close.png" alt="close">
+            <img src="https://images.pexels.com/photos/1595483/pexels-photo-1595483.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="product">
+         </div>
+         <div class="dots">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+        <div class="product-info">
+            <p>$120.00</p>
+            <p>Bike</p>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti culpa perferendis libero consequuntur velit quae asperiores! Placeat quibusdam voluptates quas earum voluptatibus, quo sed maxime tempore ex, iste consectetur culpa?</p>
+        </div>
+        <button class="primary-button add-to-cart"> 
+            <img src="./icons/bt_add_to_cart.svg" alt="Add to cart">Add to cart
+            </button>
+    </aside>
+      
+
     <section class="main-container">
         <div class="cards-container">
             <!-- <div class="product-card">
