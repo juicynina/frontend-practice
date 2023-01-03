@@ -6,7 +6,8 @@ const productDetailCloseIcon = document.querySelector('.product-detail-close');
 const menuShoppingCart = document.querySelector('.navbar-cart');
 const shoppingCartContainer = document.querySelector('#shoppingCartContainer');
 const productDetailContainer = document.querySelector('#productDetail');
-const cardsContainer = document.querySelector('.cards-container')
+const cardsContainer = document.querySelector('.cards-container');
+const darkenBackgroundContainer = document.querySelector('.darken');
 
 menuEmail.addEventListener('click', toggleDesktopMenu)
 menuHamburguesa.addEventListener('click', toggleMenuHamburguesa)
@@ -18,7 +19,16 @@ function toggleDesktopMenu() {
     mobileMenu.classList.add('inactive')
     shoppingCartContainer.classList.add('inactive')
     productDetailContainer.classList.add('inactive')
+    darkenBackgroundContainer.classList.remove('inactive');
 } 
+
+// intento de hacer que se active el background si el desktop o shopping cart se esconden
+// function darkenBackgroundOrNot() {
+//     if (desktopMenu.hide()) 
+//     darkenBackgroundContainer.classList.add('inactive');
+//     else 
+//     darkenBackgroundContainer.classList.add('inactive');
+// }
 
 function toggleMenuHamburguesa() {
     mobileMenu.classList.toggle('inactive');
@@ -38,10 +48,12 @@ function openProductDetailAside() {
     productDetailContainer.classList.remove('inactive')
     desktopMenu.classList.add('inactive')
     shoppingCartContainer.classList.add('inactive')
+    darkenBackgroundContainer.classList.remove('inactive');
 }
 
 function closeProductDetailAside() {
     productDetailContainer.classList.add('inactive')
+    darkenBackgroundContainer.classList.add('inactive');
 }
 
 const productList = []
