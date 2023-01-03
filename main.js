@@ -19,7 +19,14 @@ function toggleDesktopMenu() {
     mobileMenu.classList.add('inactive')
     shoppingCartContainer.classList.add('inactive')
     productDetailContainer.classList.add('inactive')
-    darkenBackgroundContainer.classList.remove('inactive');
+    // darkenBackgroundContainer.classList.remove('inactive');
+    const isDesktopMenu = !desktopMenu.classList.contains("inactive")
+
+    if(isDesktopMenu){
+        darkenBackgroundContainer.classList.remove("inactive");
+    } else {
+        darkenBackgroundContainer.classList.add("inactive");
+    }
 } 
 
 // intento de hacer que se active el background si el desktop o shopping cart se esconden
@@ -29,6 +36,10 @@ function toggleDesktopMenu() {
 //     else 
 //     darkenBackgroundContainer.classList.add('inactive');
 // }
+
+function darkenChange(){
+    darkenBackgroundContainer.classList.toggle("inactive");
+}
 
 function toggleMenuHamburguesa() {
     mobileMenu.classList.toggle('inactive');
